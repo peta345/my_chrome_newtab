@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hoge</title>
+  <script src="jquery-2.1.4.js"></script>
+  <style>
+  body{
+    background-color: grey;
+  }
+  </style>
+</head>
+<body>
+<h4>ウィンドウ内でのマウス座標を取得する。ウィンドウの左上が常に (0, 0) の座標となる</h4>
+<p id="hoge"></p>
+<h4>ページ全体でのマウスの位置座標を取得する。ページをスクロールさせると、pageX, pageY は clientX, clientY よりも大きい値になります。</h4>
+<p id="hoge1"></p>
+<h4>ページ全体でのマウスの位置座標を取得する。ページをスクロールさせると、pageX, pageY は clientX, clientY よりも大きい値になります。</h4>
+<p id="hoge2" style="padding:30px; border-style: solid ; border-width: 1px;"></p>
+<h4>スクリーン（モニタ・ディスプレイ）全体でのマウス座標を取得する。ディスプレイの左上が常に (0, 0) 座標となる</h4>
+<p id="hoge3" style=""></p>
+<h4>ウィンドウの幅と高さを取得する。event.clientX, event.clientY と同等の計算方法</h4>
+<p id="hoge4" style=""></p>
+<h4>ページ全体の幅と高さを取得する。event.pageX, event.pageY と同等の計算方法。</h4>
+<p id="hoge5" style=""></p>
+<h4>ボタンの座標を表示</h4>
+<button id="mogo">Gelloooooooo</button>
+<div id="mogo1"></div>
+<img src="./reimu1.gif" alt="">
+
+  <script>
+  $(function(){
+    $(window).mousemove( function(evt) {
+      var client_pos = "clientX: " + evt.clientX + " / " + "clientY: " + evt.clientY + "<br />";
+      $("#hoge").html(client_pos);
+
+      var page_pos = "pageX: " + evt.pageX + " / " + "pageY: " + evt.pageY + "<br />";
+      $("#hoge1").html(page_pos);
+
+      var offset_pos = "offsetX: " + evt.offsetX + " / " + "offsetY: " + evt.offsetY + "<br />";
+      $("#hoge2").html(offset_pos);
+
+      var screen_pos = "screenX: " + evt.screenX + " / " + "screenY: " + evt.screenY + "<br />";
+      $("#hoge3").html(screen_pos);
+
+      var window_size = "window width: " + $(window).width() + " / " + "window height: " + $(window).height() + "<br />";
+      $("#hoge4").html(window_size);
+
+      var document_size = "document width: " + $(document).width() + " / " + "document height: " + $(document).height() + "<br />";
+      $("#hoge5").html(document_size);
+
+      // var btn = $("#mogo");
+      // var pos = btn.offset();
+      // $("#mogo1").html("left:" + pos.left + ", right:" + pos.top);
+      // $("#mogo").on("click", function(){
+      //   $(this).animate({"left": "+=50px"}, "slow");
+      //})
+}); // -- mouseover
+
+var btn = $("#mogo");
+var pos = btn.offset();
+$("#mogo1").html("left:" + pos.left + ", right:" + pos.top);
+$("#mogo").on("click", function(){
+  $(this).animate({"left": "+=50px"}, "slow");
+})
+
+
+  });
+
+  </script>
+</body>
+</html>

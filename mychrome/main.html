@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="./bootstrap.min.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+    <script src="jquery-2.1.4.js"></script>
+  <script src="tabs.js"></script>
+  <style>
+  body , html{
+    font-family: 'Electrolize', sans-serif;
+    background: url(bg1.jpg) center center / cover no-repeat fixed;
+    height:100%;
+    width:100%;
+  }
+  #content {
+    width:100%;
+    height: 100%;
+    position:relative;
+    padding-bottom:100px;
+  }
+  .footer {
+    position:fixed;
+    bottom: 0;
+    width:100%;
+    height:100px;
+    text-align: center;
+  }
+  #clock {
+    margin-top:15px;
+    color: #005e6e;
+    font-size: 92px;
+  }
+  #ser {
+    background-color: #181512;
+    border: 1px solid #bea492;
+    color: grey;
+    padding: 7px;
+    width: 250px;
+  }
+  .box {
+    width:300px;
+    margin: 0 auto;
+    background-color: #181512;
+    border: 1px solid #bea492;
+    padding: 10px 30px;
+    color: white;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div id="clock" class="col-md-12 text-center"></div>
+        <!-- main -->
+        <div class="col-md-12 text-center">
+          <a href="https://github.com/peta345" class="box">Github</a>
+          <a href="https://twitter.com/?lang=ja" class="box">Twitter</a>
+          <a href="https://portal.sa.dendai.ac.jp/up/faces/login/Com00505A.jsp" class="box">TDU UNIPA</a>
+          <a href="http://blog.livedoor.jp/itsoku/" class="box">IT</a>
+          <a href="http://mail.ms.dendai.ac.jp/cgi-bin/index.cgi" class="box">DeepMail</a>
+        </div>
+        <!-- footer -->
+        <div class="footer col-md-12　center-block">
+          <input id="ser" type="text" placeholder="Seaech word">
+         </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "MyTestChromeAddon",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Chromeアドオンを自作してみるテスト。",
+  "web_accessible_resources": ["food.png", "reimu1.gif","bg1.jpg"],
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-2.1.4.js", "fuga.js", "tabs.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
